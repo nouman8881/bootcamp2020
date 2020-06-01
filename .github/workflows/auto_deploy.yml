@@ -23,9 +23,9 @@ jobs:
     - name: installing node
       uses: action/setup-node@v2-beta
       with: 
-        node-version: 14
+        node-version: 12
         - name:  install surge
-          run: npm install -g surge
+          run: npm install --global surge
           
         -name: deploying using surge
          run: surge ./ animated-dinosaurs.surge.sh  --token $ {{secrets.SURGE_TOKEN}}
